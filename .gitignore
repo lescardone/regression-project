@@ -1,3 +1,10 @@
+# Messy Data
+bluenile_round_25.csv
+bluenile_round_50.csv
+
+# Mac
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

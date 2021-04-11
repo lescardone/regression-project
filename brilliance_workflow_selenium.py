@@ -120,12 +120,12 @@ while True:
     last_height = new_height
 
 page_soup = BeautifulSoup(driver.page_source,'lxml')
-row_blocks = soup.find('div',id='brl-diamond-search-table').find_all('div',class_='ds__item search-repeat')
-row_blocks
+row_blocks = soup.find('div',class_='search-table-wrapper-outter').find_all('div',class_='ds__item search-repeat')
+len(row_blocks)
 
 for idx, row in enumerate(row_blocks):
     
-    if idx % 2:
+    if idx % :
         
         # got to 'details' and get link
         link = row.find('a')['href']
@@ -134,7 +134,7 @@ for idx, row in enumerate(row_blocks):
         # open new tab
         driver.execute_script(f'''window.open('{tab}','_blank');''')
         driver.switch_to.window(driver.window_handles[1])
-        time.sleep(3)
+        time.sleep(2)
         driver.refresh()
     
         # pull html
@@ -161,7 +161,7 @@ for idx, row in enumerate(row_blocks):
         cell_data    
     
         length = len(df)
-        if len(row) == 18:
+        if len(cell_data) == 18:
             df.loc[length] = cell_data
         else:
             pass

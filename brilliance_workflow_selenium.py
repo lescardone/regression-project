@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, ElementClickInterceptedException
 import time
 
 
@@ -27,7 +26,6 @@ button.click()
 min_price = driver.find_element_by_id('priceMin')
 min_price.clear()
 min_price.send_keys('500')
-
 
 max_price = driver.find_element_by_id('priceMax')
 max_price.clear()
@@ -156,7 +154,7 @@ for idx, row in enumerate(row_blocks):
 
         # price
         price = table.find('div',class_='product__tab-price product__title-item product__title-price pull-right no-margin-top').find('span').text
-        print(price,':', i)
+        print(price,':', idx)
         
         # grab all the cells in the table
         cells = table.find_all('div',class_='product-specs__listing-item')
@@ -179,17 +177,34 @@ for idx, row in enumerate(row_blocks):
         driver.close()
         driver.switch_to.window(driver.window_handles[0])
 
-df.to_csv('brilliance.csv')
+    df.to_csv('brilliance.csv')
   
-# initialize another df
+# 500 - 600: 1,909
 
+# ----------------
+
+# two loops, idx % 10
+# 600 - 700: 5,367
+# 700 - 800: 5,046
+
+# five loops: idx % 5
+# 800 - 900: 2,484
+# 900 - 1000: 2,705
+# 1000 - 1100: 2,432
+# 1100 - 1200: 1,748
+# 1200 - 1300: 1,230
+
+# once, all
+# 1300 - 1400: 817
+    
+# initialize another df
 df2 = pd.DataFrame(columns=columns)
 df2
   
-min_val = 800
-max_val = 900
+min_val = 500
+max_val = 600
 
-for j in range (5):
+for j in range (2):
     # scroll to top
     driver.execute_script('window.scrollTo(0,200)')
     
@@ -231,7 +246,7 @@ for j in range (5):
     
     for idx, row in enumerate(row_blocks):
     
-        if idx % 5 == 0:
+        if idx % 10 == 0:
         
             # got to 'details' and get link
             link = row.find('a')['href']
@@ -283,6 +298,10 @@ for j in range (5):
     
     print('PAGE GATHERED:',j)    
     
+
+# two loops, idx % 3
+# 1400 - 1600: 2,992
+# 1600 - 1800: 3,059
 
 min_val = 1300
 max_val = 1400
@@ -384,6 +403,20 @@ for j in range (2):
 
 df2.to_csv('brilliance_2.csv')
 
+# once, idx % 4
+# 1800 - 2000: 2,146
+
+# once, idx % 3
+# 2000 - 2300: 2,126
+
+# three loops, all
+# 2300 - 2600: 1,302
+# 2600 - 2900: 1,297
+# 2900 - 3200: 1,130
+
+# once, all
+# 3200 - 3800
+
 min_val = 2300
 max_val = 2500
 
@@ -478,6 +511,13 @@ for j in range (3):
     print('PAGE GATHERED:',j)
 
 df2.to_csv('brilliance_2.csv')
+
+# five loops, all
+# 3800 - 4800
+# 4800 - 5800
+# 5800 - 6800
+# 6800 - 7800
+# 7800 - 8800
 
 min_val = 3200
 max_val = 3800
@@ -574,6 +614,9 @@ for j in range (5):
 
 df2.to_csv('brilliance_2.csv')
 
+# once, all
+# 8800 - 15000
+
 min_val = 7800
 max_val = 8800
 
@@ -666,5 +709,7 @@ for j in range (1):
         driver.switch_to.window(driver.window_handles[0])
                     
     print('PAGE GATHERED:',j)
+
+driver.close()
 
 df2.to_csv('brilliance_2.csv')

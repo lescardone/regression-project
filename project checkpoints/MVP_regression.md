@@ -5,7 +5,8 @@ I trained a Scikit-learn Linear Regression model on 12 features to predict the p
 I plotted the residual errors of this Simple Multiple Linear Rregression model's predictions. As price increases, the model performs more poorly.
 ![Residual Error](./res_error_scatter_1.png)
 
-We see this again in the below probability plot, where where the distribution begins to stray from a Gaussian Distribution as the prices moves further from the mean. 
+We see this again in the below probability plot, where where the distribution begins to stray from a Gaussian Distribution as the prices move further from the mean. 
+
 ![Residual Error 2](./res_error_probplot_1.png)
 
 This is my baseline, I plan to increase complexity by performing some feature engineering -- I need to create a polynomial term for the feature 'Carat'. I will most likely use the Polynomial Library to create some feature interaction.

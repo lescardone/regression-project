@@ -403,10 +403,10 @@ for j in range (2):
 
 df2.to_csv('brilliance_2.csv')
 
-# once, idx % 4
-# 1800 - 2000: 2,146
 
-# once, idx % 3
+# three loops, idx % 3
+# 1600 - 1800: 3,059
+# 1800 - 2000: 2,146
 # 2000 - 2300: 2,126
 
 # three loops, all
@@ -417,8 +417,8 @@ df2.to_csv('brilliance_2.csv')
 # once, all
 # 3200 - 3800
 
-min_val = 2300
-max_val = 2500
+min_val = 1400
+max_val = 1600
 
 for j in range (3):
     # scroll to top
@@ -426,7 +426,7 @@ for j in range (3):
     
     # set new prices
     min_val = max_val
-    max_val += 100
+    max_val += 200
     print(max_val)
         
     # adjust price
@@ -509,8 +509,7 @@ for j in range (3):
         driver.switch_to.window(driver.window_handles[0])
                     
     print('PAGE GATHERED:',j)
-
-df2.to_csv('brilliance_2.csv')
+    df2.to_csv('brilliance_2.csv')
 
 # five loops, all
 # 3800 - 4800

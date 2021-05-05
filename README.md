@@ -22,21 +22,32 @@ I was able to 'scrape' 52,372 samples from Blue Nile and 21,782 samples from Bri
 I used 11 diamond features available on both websites in my initial multiple linear regression model:
 carat, cut, color, clarity, polish, culet, table %, depth %, symmetry, length to width, and fluorescence.
 
-#### Carat: the diamond's weight    
-#### Cut: how well proportioned the diamonds dimensions are
-#### Color: absence of color to light brown, the larger the carat the more visible the color
-#### Clarity: assessment of small imperfections on the surface and within the stone
-#### Polish: how smoothly the diamond has been polished and how defined the edges are, if any marks are visible from polishing wheel
-#### Culet: the facet at the tip of a gemstone. The preferred culet is not visible, graded 'none'
-#### Table %: the largest facet of a gemstone, the width expressed as a percentage of its average diameter
-#### Depth %: the height of the gemstone measured from the culet to the table, divided by average girdle diameter
-#### Symmetry: the symmetry and alignment of a diamond's facets    
-#### Length to Width: length divided by width
-#### Fluorescence: measure of visible light some diamonds emit when exposed to UV rays
-   
-![image](./images/diamond.jpeg)
-  
-### TARGET: Price
+- **Carat:** 
+the diamond's weight    
+-  **Cut:** 
+how well proportioned the diamonds dimensions are
+- **Color:** 
+absence of color to light brown, the larger the carat the more visible the color
+- **Clarity:**
+assessment of small imperfections on the surface and within the stone
+- **Polish:** 
+how smoothly the diamond has been polished and how defined the edges are, if any marks are visible from polishing wheel
+- **Culet:** 
+the facet at the tip of a gemstone. The preferred culet is not visible, graded 'none'
+- **Table %:** 
+the largest facet of a gemstone, the width expressed as a percentage of its average diameter
+- **Depth %:** 
+the height of the gemstone measured from the culet to the table, divided by average girdle diameter
+- **Symmetry:** 
+the symmetry and alignment of a diamond's facets    
+- **Length to Width:** 
+length divided by width
+- **Fluorescence:** 
+measure of visible light some diamonds emit when exposed to UV rays
+- **TARGET:** Price  
+
+![image](./final/final-write-up/images/diamond.jpeg)
+
 
 ## DESIGN
 

@@ -3,6 +3,10 @@ bluenile_round_25.csv
 bluenile_round_50.csv
 toss_later/
 
+#Presentation
+*.key
+*/*.key
+
 # Mac
 .DS_Store
 

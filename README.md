@@ -3,6 +3,7 @@ Leslie Cardone
 April 16, 2021  
 Metis: Webscraping and Linear Regression
 
+## ABSTRACT
 
 In 2017 it seemed that many of my friends and colleagues were getting engaged. The centerpieces surrounding these engagement announcements were the sparkling diamond rings proudly displayed on the fingers of each bride-to-be. 
 
